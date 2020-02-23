@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Member">
+
+	<resultMap id="MemberResult" type="Member">
+		<result property="mb_id" column="mb_id" />
+		<result property="mb_nickName" column="mb_nickName" />
+		<result property="mb_pw" column="mb_pw" />
+		<result property="mb_name" column="mb_name" />
+		<result property="mb_imgSrc" column="mb_imgSrc" />
+		<result property="mb_sex" column="mb_sex" />
+		<result property="mb_phone" column="mb_phone" />
+		<result property="mb_birthDate" column="mb_birthDate" />
+		<result property="mb_email" column="mb_email" />
+		<result property="mb_postCode" column="mb_postCode" />
+		<result property="mb_addr1" column="mb_addr1" />
+		<result property="mb_addr2" column="mb_addr2" />
+		<result property="mb_remark" column="mb_remark" />
+		<result property="mb_authority" column="mb_authority" />
+		<result property="mb_status" column="mb_status" />
+		<result property="mb_regDate" column="mb_regDate" />
+		<result property="mb_wdDate" column="mb_wdDate" />
+	</resultMap>
+
+	<select id="checklogin" parameterType="Member" resultType="int">
+		select count(*) from member
+		where mb_id = #{mb_id}
+		and mb_pw = #{mb_pw}
+		<if test="mb_status!=null"> and mb_status = '1' </if>
+	</select>
+
+	<select id="memberdetail" parameterType="Member"
+		resultType="Member">
+		<![CDATA[
+			select * from member where mb_id = #{mb_id}
+		]]>
+	</select>
+
+	<select id="totalMember" resultType="int">
+   		<![CDATA[
+   			select count(*) from member
+   		]]>
+	</select>
+
+	<select id="listMember" parameterType="Member"
+		resultMap="MemberResult">
+   		<![CDATA[
+   			select 	mb_id, mb_nickname, mb_pw, mb_name, mb_imgsrc, decode(mb_sex,'1','남성','2','여성','9','비공개') mb_sex, 
+		       		mb_phone, to_char(mb_birthdate,'yyyy-mm-dd') mb_birthdate,  mb_email, mb_postcode, mb_addr1, mb_addr2, mb_remark, 
+		       		decode(mb_authority,'1','회원','2','관리자') mb_authority, decode(mb_status,'1','Active','2','Inactive') mb_status, 
+		       		to_char(mb_regdate,'yyyy-mm-dd') mb_regdate, to_char(mb_wddate,'yyyy-mm-dd') mb_wddate 
+	   		from    (select rownum rn, a.* from (select * from member order by mb_nickname) a) 
+       		where   rn between #{start} and #{end}
+   		]]>
+	</select>
+	<select id="memberNickNameCnt" parameterType="java.lang.String"
+		resultType="int">
+   		<![CDATA[
+   			select count(*) from member where mb_nickName = #{mb_nickName}
+   		]]>
+	</select>
+
+	<update id="memberUpdate" parameterType="Member">
+		update member set mb_nickname=#{mb_nickName}
+		, mb_pw=#{mb_pw},
+		mb_name=#{mb_name}
+		<if test="mb_imgSrc!=null">, mb_imgSrc=#{mb_imgSrc}</if>
+		, mb_sex=#{mb_sex}
+		, mb_phone=#{mb_phone}
+		<if test="mb_birthDate!=null">, mb_birthDate=#{mb_birthDate}</if>
+		, mb_email=#{mb_email}
+		, mb_postCode=#{mb_postCode}
+		, mb_addr1=#{mb_addr1}
+		, mb_addr2=#{mb_addr2}
+		<if test="mb_regDate!=null">, mb_regDate=#{mb_regDate}</if>
+		<if test="mb_wdDate!=null">, mb_wdDate=#{mb_wdDate}</if>
+		<if test="mb_authority!=null">, mb_authority=#{mb_authority}</if>
+		<if test="mb_status!=null">, mb_status=#{mb_status}</if>
+		where mb_id=#{mb_id}
+	</update>
+
+	<select id="memberIdCnt" parameterType="java.lang.String"
+		resultType="int">
+   		<![CDATA[
+   			select count(*) from member where mb_id = #{mb_id}
+   		]]>
+	</select>
+
+	<insert id="memberInsert" parameterType="Member">
+		insert into member
+		values (#{mb_id}, #{mb_nickName}, #{mb_pw}, #{mb_name},
+		#{mb_imgSrc},
+		#{mb_sex}, #{mb_phone},
+		#{mb_birthDate}, #{mb_email}, #{mb_postCode},
+		#{mb_addr1}, #{mb_addr2}, NULL, '1',
+		'1', sysdate, NULL)
+	</insert>
+
+	<update id="memberDelete" parameterType="java.lang.String">
+		update member set mb_status='2' where mb_id=#{mb_id}
+	</update>
+	
+	<select id="memberIdFind" parameterType="Member"
+		resultType="java.lang.String">
+   		<![CDATA[
+   			select mb_id from member where mb_nickName = #{mb_nickName} and mb_email = #{mb_email} and mb_name = #{mb_name}
+   		]]>
+	</select>
+	
+	<select id="memberPwFind" parameterType="Member"
+		resultType="int">
+   		<![CDATA[
+   			select count(*) from member where mb_nickName = #{mb_nickName} and mb_email = #{mb_email} and mb_name = #{mb_name} and mb_id = #{mb_id}
+   		]]>
+	</select>
+	
+	<update id="changePw" parameterType="Member">
+		update member set mb_pw = #{mb_pw} where mb_id = #{mb_id} 
+	</update>
+
+
+
+</mapper>

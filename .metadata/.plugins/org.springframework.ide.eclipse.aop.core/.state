@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="s20180704"/>
+<aop-project name="2index_setting"/>
+<aop-project name="5ex_code_paste"/>
+<aop-project name="3pom_4_3_14_release_setting"/>
+<aop-project name="4mybatis_setting"/>
+<aop-project name="1project_start_setting"/>
+</aop-reference-model>
