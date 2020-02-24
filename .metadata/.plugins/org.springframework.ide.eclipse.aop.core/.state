@@ -5,5 +5,7 @@
 <aop-project name="5ex_code_paste"/>
 <aop-project name="3pom_4_3_14_release_setting"/>
 <aop-project name="4mybatis_setting"/>
+<aop-project name="6ajax_json_pom_setting"/>
+<aop-project name="7newproject"/>
 <aop-project name="1project_start_setting"/>
 </aop-reference-model>
