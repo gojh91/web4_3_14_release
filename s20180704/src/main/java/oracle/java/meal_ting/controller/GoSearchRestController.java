@@ -1,19 +1,13 @@
 package oracle.java.meal_ting.controller;
 
-import java.util.HashMap;
 import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import oracle.java.meal_ting.model.Board;
-import oracle.java.meal_ting.model.Reply;
 import oracle.java.meal_ting.model.ResInfo;
 import oracle.java.meal_ting.service.SearchService;
-import scala.collection.Iterator;
 
 @RestController
 @RequestMapping("/GOsearchRest")
