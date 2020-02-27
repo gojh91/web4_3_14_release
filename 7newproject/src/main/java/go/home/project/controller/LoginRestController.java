@@ -24,14 +24,14 @@ public class LoginRestController {
 		Member member = new Member();
 		member.setMb_id(mb_id);
 		member.setMb_pw(mb_pw);
-		int checklogin = ms.checklogin(member);//아이디 패스워드 확인
+		int checklogin = ms.checklogin(member);//id,pw,status check(count) 1 = true 0 = false
 		String result = "login";
 
 		if (checklogin == 1) {
-			member = ms.memberdetail(member);//로그인 한 사용자 다 가져오기
+			member = ms.memberdetail(member);
 			HttpSession session = request.getSession();
-			session.setAttribute("loginMember", member);//로그인 한 사용자 세션 넣기
-			session.setAttribute("checkLogin", checklogin);//로그인 했다는 표시 세션 넣기
+			session.setAttribute("loginMember", member);//login member detail
+			session.setAttribute("checkLogin", checklogin);//check(count) 1 = true 0 = false
 
 			int authority = Integer.parseInt(member.getMb_authority());
 			if (authority == 2) {
@@ -47,14 +47,14 @@ public class LoginRestController {
 	@RequestMapping("nickNameChk")
 	public int nicknamechk(Model model, HttpServletRequest request, String mb_nickName ) {
 		System.out.println("@RequestMapping(value = \"nickNameChk\")");
-		int nickcheck = ms.memberNickNameCnt(mb_nickName);//닉네임 중복 갯수
+		int nickcheck = ms.memberNickNameCnt(mb_nickName);//count check 1 or 0
 		return nickcheck;
 	}
 	
 	@RequestMapping("idChk")
 	public int idChk(Model model, HttpServletRequest request, String mb_id ) {
 		System.out.println("@RequestMapping(value = \"idChk\")");
-		int idcheck = ms.memberIdCnt(mb_id);//아이디 중복 갯수
+		int idcheck = ms.memberIdCnt(mb_id);//count check 1 or 0
 		return idcheck;
 	}
 	
@@ -78,7 +78,7 @@ public class LoginRestController {
 		member.setMb_email(mb_email);
 		member.setMb_name(mb_name);
 		member.setMb_nickName(mb_nickName);
-		int findpw = ms.pwFind(member); //해당하는 맴버 count
+		int findpw = ms.pwFind(member); //count 1 = true 0 = false
 		
 		return findpw;
 	}

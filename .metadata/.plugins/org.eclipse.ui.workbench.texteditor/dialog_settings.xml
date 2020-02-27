@@ -2,12 +2,17 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Comm" key="selection"/>
+		<item value="hsc" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="hsc"/>
+			<item value="checkmem"/>
+			<item value="check"/>
+			<item value="memberDetail"/>
+			<item value="avg"/>
 			<item value="comm"/>
 			<item value="tag"/>
 			<item value="jstl"/>
@@ -18,19 +23,14 @@
 			<item value="tile"/>
 			<item value="inject"/>
 			<item value="cglib"/>
-			<item value="aspect"/>
-			<item value="commons"/>
-			<item value="commos"/>
-			<item value="dbcp"/>
-			<item value="common"/>
 		</list>
 		<list key="replacehistory">
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="288" key="DIALOG_WIDTH"/>
-		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
-		<item value="391" key="DIALOG_HEIGHT"/>
+		<item value="340" key="DIALOG_WIDTH"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+		<item value="454" key="DIALOG_HEIGHT"/>
 		<item value="1157" key="DIALOG_X_ORIGIN"/>
 		<item value="295" key="DIALOG_Y_ORIGIN"/>
 	</section>

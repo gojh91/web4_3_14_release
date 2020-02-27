@@ -75,6 +75,11 @@ public class MainServiceImpl implements MainService{
 		// TODO Auto-generated method stub
 		return md.searchresinfoboard1(keyword);
 	}
+	@Override
+	public List<ResInfo> reslist() {
+		// TODO Auto-generated method stub
+		return md.reslist();
+	}
 
 
 }

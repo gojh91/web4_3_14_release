@@ -11,5 +11,17 @@
       where bd_category = '1' and bd_status = '1' and e.mb_id = d.mb_id
       order by bd_num DESC
    </select>
+   
+   <select id="avgScore" resultType="Board">
+   		select res_num, AVG(bd_score) avg_score
+   		from board
+   		group by res_num
+   
+   </select>
+   <select id="setAvgScore" parameterType="Board">
+   		update res_info
+   		set res_score=#{avg_score}
+   		where res_num=#{res_num}
+   </select>
 
 </mapper>

@@ -27,7 +27,7 @@ public class MainController {
 	public String MainPage(HttpServletRequest request, Model model) {
 		System.out.println("@RequestMapping(value = \"main\")");
 		if(request.getSession().getAttribute("checkLogin") != null) {
-			//·Î±×ÀÎ ‰çÀ» ¶§ µé¾î¿À´Â °÷
+			//In session login member, loginìƒíƒœ 
 			HttpSession session = request.getSession();
 			Member loginMember = (Member)session.getAttribute("loginMember");
 			int checkLogin = (Integer)session.getAttribute("checkLogin");
@@ -35,9 +35,11 @@ public class MainController {
 			model.addAttribute("checkLogin", checkLogin);
 			
 			if (Integer.parseInt(loginMember.getMb_authority()) ==2) {
-				return "forward:memberList.do";//°ü¸®ÀÚ´Â °ü¸®ÀÚ ÆäÀÌÁö·Î ÀÌµ¿
-			}		
+				return "forward:memberList.do";//ìš´ì˜ì í˜ì´ì§€
+			}
 		}
+		List<ResInfo> reslist = ms.reslist();
+		model.addAttribute("reslist", reslist);
 		return "main";
 	}
 	

@@ -12,7 +12,7 @@
 <body>
 	<c:forEach var="review" items="${reviewList}" varStatus="status">
 		<h4 class="title">
-			<b><a href="JYreviewDetail.do?bd_num=${board.bd_num}">${board.bd_title}</a></b>
+			<a href="reviewDetail.do?bd_num=${review.bd_num}">${review.bd_title}</a>
 		</h4>
 		<ul class="post-footer">
 			<li><a><i id="likeBtn" class="ion-heart" style="color: red;"

@@ -78,4 +78,10 @@ public class MainDaoImpl implements MainDao{
 		// TODO Auto-generated method stub
 		return session.selectOne("searchresinfoboard1",keyword);
 	}
+
+	@Override
+	public List<ResInfo> reslist() {
+		// TODO Auto-generated method stub
+		return session.selectList("reslist");
+	}
 }

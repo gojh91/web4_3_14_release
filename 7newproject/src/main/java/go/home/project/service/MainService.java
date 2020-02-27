@@ -19,4 +19,6 @@ public interface MainService {
 	int searchresinfo1(String keyword);
 	List<ResInfoBoard> searchresinfoboard(String keyword);
 	int searchresinfoboard1(String keyword);
+	List<ResInfo> reslist();
+	
 }
