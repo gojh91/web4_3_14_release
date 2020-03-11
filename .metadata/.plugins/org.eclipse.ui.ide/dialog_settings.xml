@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="D:\Ddownload\web_4_3_14_release\8main,login_template"/>
 		<item value="D:\Ddownload\web_4_3_14_release\Servers"/>
 		<item value="D:\Ddownload\web_4_3_14_release\7newproject"/>
 		<item value="C:\Users\student\Desktop\4.3.14release\s20180704"/>
