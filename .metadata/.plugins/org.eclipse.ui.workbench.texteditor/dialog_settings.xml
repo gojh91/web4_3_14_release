@@ -2,12 +2,13 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="hsc" key="selection"/>
+		<item value="circle-preloader" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="circle-preloader"/>
 			<item value="hsc"/>
 			<item value="checkmem"/>
 			<item value="check"/>
@@ -22,7 +23,6 @@
 			<item value="junit"/>
 			<item value="tile"/>
 			<item value="inject"/>
-			<item value="cglib"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -31,7 +31,7 @@
 		<item value="340" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 		<item value="454" key="DIALOG_HEIGHT"/>
-		<item value="1157" key="DIALOG_X_ORIGIN"/>
+		<item value="918" key="DIALOG_X_ORIGIN"/>
 		<item value="295" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
