@@ -2,5 +2,6 @@
 <aop-reference-model>
 <aop-project name="s20180704"/>
 <aop-project name="8main,login_template"/>
-<aop-project name="9newproject"/>
+<aop-project name="9writeform_template"/>
+<aop-project name="10newproject"/>
 </aop-reference-model>

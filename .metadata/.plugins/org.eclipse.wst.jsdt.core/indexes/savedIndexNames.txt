@@ -1,10 +1,5 @@
 INDEX VERSION 1.4+D:\Ddownload\web_4_3_14_release\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-3503939100.index
-3692282698.index
-1241538653.index
-1706357062.index
 1409988395.index
-1000329297.index
-1758032104.index
-3817880559.index
+4130512462.index
+870104217.index
 2542661199.index
