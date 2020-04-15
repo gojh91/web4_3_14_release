@@ -8,4 +8,18 @@
 		select * from res_info
 		]]>
 	</select>
+
+	<select id="resInfo" resultType="ResInfo"
+		parameterType="int">
+		<![CDATA[
+		select * from res_info where res_num = #{res_num}
+		]]>
+	</select>
+
+	<select id="menuInfo" resultType="Menu"
+		parameterType="int">
+		<![CDATA[
+		select * from menu where res_num = #{res_num}
+		]]>
+	</select>
 </mapper>

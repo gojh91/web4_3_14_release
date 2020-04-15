@@ -2,4 +2,8 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.lang.reflect.Member"/>
     <fullyQualifiedTypeName name="go.home.project.model.Member"/>
+    <fullyQualifiedTypeName name="go.home.project.service.ResService"/>
+    <fullyQualifiedTypeName name="go.home.project.model.ResInfo"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="go.home.project.model.Menu"/>
 </qualifiedTypeNameHistroy>

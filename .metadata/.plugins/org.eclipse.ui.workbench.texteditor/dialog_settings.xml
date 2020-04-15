@@ -2,27 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="agreeall" key="selection"/>
+		<item value="board" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="board"/>
+			<item value="JYwriteForm"/>
+			<item value="JYwrite"/>
+			<item value="nickNamechk"/>
+			<item value="validCheck"/>
+			<item value="slick3-dot-overlay"/>
+			<item value="selection-1"/>
+			<item value="slick-slide10"/>
+			<item value="mn_num"/>
 			<item value="agreeall"/>
 			<item value="postcodify_search_button"/>
 			<item value="postcodify_postcode5"/>
 			<item value="context"/>
 			<item value="circle-preloader"/>
 			<item value="hsc"/>
-			<item value="checkmem"/>
-			<item value="check"/>
-			<item value="memberDetail"/>
-			<item value="avg"/>
-			<item value="comm"/>
-			<item value="tag"/>
-			<item value="jstl"/>
-			<item value="ibatis"/>
-			<item value="maven-"/>
 		</list>
 		<list key="replacehistory">
 		</list>
@@ -31,7 +31,7 @@
 		<item value="340" key="DIALOG_WIDTH"/>
 		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
 		<item value="454" key="DIALOG_HEIGHT"/>
-		<item value="456" key="DIALOG_X_ORIGIN"/>
-		<item value="330" key="DIALOG_Y_ORIGIN"/>
+		<item value="1127" key="DIALOG_X_ORIGIN"/>
+		<item value="372" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
