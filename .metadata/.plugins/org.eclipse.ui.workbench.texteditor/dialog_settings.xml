@@ -2,12 +2,14 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="board" key="selection"/>
+		<item value="ReviewResult" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="ReviewResult"/>
+			<item value="reviewInsert"/>
 			<item value="board"/>
 			<item value="JYwriteForm"/>
 			<item value="JYwrite"/>
@@ -21,8 +23,6 @@
 			<item value="postcodify_search_button"/>
 			<item value="postcodify_postcode5"/>
 			<item value="context"/>
-			<item value="circle-preloader"/>
-			<item value="hsc"/>
 		</list>
 		<list key="replacehistory">
 		</list>
